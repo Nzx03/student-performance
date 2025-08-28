@@ -10,7 +10,7 @@ def error_message_detail(error,error_detail:sys):
 
     return error_message   #error message
 
-class CustonException(Exception):
+class CustomException(Exception):
     def __init__(self, error_message,error_detail:sys):  #constructor
         super().__init__(error_message)  #for inheriting the __init__ function (from exception)
         self.error_message=error_message_detail(error_message,error_detail=error_detail)
