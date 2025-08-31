@@ -20,7 +20,7 @@ class DataTransformationConfig:
 
 class DataTransformation:
     def __init__(self):
-          self.data_transformation_congif=DataTransformationConfig
+          self.data_transformation_congif=DataTransformationConfig()
 
     def get_data_transformer_object(self):  #fro FE
           #this is for data transformation
@@ -90,12 +90,12 @@ class DataTransformation:
                    f"applying preprocessing object on training dataframe and testing dataframe."
                    )
               
-              input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
+              input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df) #Fitting the preprocessor on train features.
               input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
 
               train_arr=np.c_[
                    input_feature_train_arr, np.array(target_feature_train_df)
-              ]
+              ]   #Combineing transformed features and target column back into one array (np.c_[] means concatenate column-wise).
               test_arr=np.c_[
                    input_feature_test_arr,np.array(target_feature_test_df)
               ]
