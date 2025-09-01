@@ -44,7 +44,7 @@ class ModelTrainer:
                "Linear regression":LinearRegression(),
                "K-Neighbors Classifier":KNeighborsRegressor(),
                "XGBClassifier": XGBRegressor(),
-               "CatBoosting Classifier":CatBoostRegressor(),
+               "CatBoosting Classifier":CatBoostRegressor(verbose=0),
                "AdaBoost Classifier":AdaBoostRegressor(),
             }
            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models)
@@ -71,7 +71,7 @@ class ModelTrainer:
            predicted=best_model.predict(X_test)
            r2_square=r2_score(y_test,predicted)
 
-           return r2_score
+           return r2_square
         except Exception as e:
             raise CustomException(e,sys)
 
