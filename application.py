@@ -36,5 +36,5 @@ def predict_datapoint():  #request will come here
 
 #to run 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",debug=True)  #will map with 127.0...
+    app.run(host="0.0.0.0")  #will map with 127.0...
 
