@@ -37,12 +37,5 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Machine Learning Pipeline
 
-1.Data Collection – Student performance dataset.
-2.EDA (Exploratory Data Analysis) – Feature distributions, correlations, and insights.
-3.Data Preprocessing – Handling missing values, encoding categorical features, scaling numerical features.
-4.Model Training & Evaluation – Multiple regression models tested.
-5.Model Selection – Best-performing model finalized.
-6.Deployment – Flask web app with saved preprocessing pipeline & model.
   
